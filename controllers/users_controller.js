@@ -1,6 +1,12 @@
 const User = require('../models/user');
 
 
+module.exports.profile = function(req,res){
+    return res.render('user_profile',{
+        title: "Codeial | Profile"
+    });
+}
+
 //render sign in page
 module.exports.signin = function(req,res){
     return res.render('user_sign_in',{
