@@ -81,3 +81,11 @@ module.exports.createSession=function(req,res){
     });
 
 }
+
+
+//signout
+module.exports.signout=function(req,res){
+    
+    res.clearCookie('user_id');
+    return res.redirect('/users/signin');
+}
