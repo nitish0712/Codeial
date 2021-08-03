@@ -1,0 +1,25 @@
+header {
+  background-color: crimson;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+  flex-direction: row; }
+  header h3 {
+    margin: 0%;
+    padding-top: 5%;
+    font-size: xx-large;
+    font-family: sans-serif;
+    font-weight: 700; }
+  header ul {
+    padding-left: 10%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; }
+    header ul li {
+      margin: 3px; }
+      header ul li a {
+        color: white;
+        font-weight: 900;
+        text-decoration: none; }

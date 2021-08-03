@@ -1,0 +1,41 @@
+header {
+    background-color: crimson;
+    // color:blue;
+    display:flex;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    flex-direction: row;
+    
+    h3{
+        margin: 0%;
+        
+        padding-top: 5%;
+        font-size: xx-large;
+        font-family: sans-serif;
+        font-weight: 700;
+        // font-style: italic;
+    }
+    ul{
+        // align-self: flex-end;
+        padding-left: 10%;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        
+
+        li{
+            // width: 110px;  
+            // height: 100px; 
+            // background-color: #8cacea;  
+            margin: 3px;
+
+            a{
+                color: white;
+                font-weight: 900;
+                text-decoration: none;
+            }
+        }
+    }
+}
