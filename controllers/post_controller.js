@@ -1,7 +1,12 @@
-module.exports.post1= function(req,res){
-    res.end('<h1>Post 1 controller</h1>');
-}
+const Post = require('../models/post');
 
-module.exports.post2= function(req,res){
-    res.end('<h1>Post 2 controller</h1>');
+module.exports.create = function(req,res){
+    Post.create({
+        content: req.body.content,
+        user: req.user._id
+    },function(err,post){
+        if(err){console.log('error in creating a post'); return;}
+
+        return res.redirect('back');
+    });
 }
