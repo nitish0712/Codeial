@@ -8,12 +8,15 @@
 
     <div>
         <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/users/profile/">Profile</a>
-            </li>
+            <% if(locals.user) { %>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/users/profile/<%= user.id %>">
+                        Profile</a>
+    
+            <% } %>
         </ul>
     </div>
 </footer>
