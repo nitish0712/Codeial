@@ -63,7 +63,6 @@
                 type: 'get',
                 url: $(deleteLink).prop('href'),
                 success: function(data){
-                    // console.log($(`#post-${data.data.post_id}`));
                     $(`#post-${data.data.post_id}`).remove();
                 },error: function(error){
                     console.log(error.responseText);
