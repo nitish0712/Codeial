@@ -22,8 +22,10 @@ const User = require('../models/user');
             path: 'comments',
             populate:{
                 path: 'user'
+            },populate: {
+                path: 'likes'
             }
-        });
+        }).populate('likes');
     
         let users = await User.find({});
         
