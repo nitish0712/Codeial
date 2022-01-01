@@ -13,6 +13,12 @@ router.get('/signup', usersController.signup);
 
 router.post('/create', usersController.create);
 
+router.get('/forgot', usersController.forgot);
+
+router.post('/reset', usersController.reset);
+
+router.post('/resetPass', usersController.resetPassword);
+
 //use passport as middleware
 router.post('/create-session',passport.authenticate(
     'local',

@@ -104,3 +104,45 @@ module.exports.destroySession = function(req,res){
 
     return res.redirect('/');
 }
+
+module.exports.reset=function(req,res){
+    var email = req.body.email;
+    console.log(email);
+    return res.render('reset-password',{
+        title: "Codeial | Reset Password",
+        user: email
+    });
+}
+
+module.exports.forgot = function(req,res){
+    return res.render('forgot-email',{
+        title: "Codeial | Reset Password",
+        
+    });
+}
+
+module.exports.resetPassword=function(req,res){
+
+    if(req.body.password != req.body.confirm_password){
+        return res.redirect('/users/forgot');
+    }
+
+    // var email = req.body.email;
+    // console.log(email.id);
+    return res.redirect('/users/signin');
+    
+
+    // User.findOne({email: req.body.email}, function(err, user){
+    //     if(err){console.log('error in finding user in signing up'); return;}
+    
+    //     if(!user){
+    //         User.create(req.body, function(err,user){
+    //             if(err){console.log('error in creating user while signing up'); return;}
+            
+    //             return res.redirect('/users/signin');
+    //         });
+    //     }else{
+    //         return res.redirect('back');
+    //     }
+    // });
+}
