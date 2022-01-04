@@ -1,6 +1,6 @@
 #home-container {
   display: flex;
-  height: 100%; }
+  height: 90%; }
   #home-container #feed-posts {
     width: 70%;
     padding: 10px; }

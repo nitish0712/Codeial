@@ -16,6 +16,14 @@ const flash = require('connect-flash');
 const customMware = require('./config/middleware ');
 
 
+//setup the chat server to be used with socket.io
+const chatServer = require('http').createServer(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+// console.log(chatSockets);
+chatServer.listen(5000);
+console.log('chat server is listening on port 5000');
+
+
 app.use(sassMiddleware({
     src: './assets/scss',
     dest: './assets/css',
